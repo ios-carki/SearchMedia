@@ -9,7 +9,9 @@ import UIKit
 
 class MovieTableViewController: UITableViewController {
 
-    var MovieList: [String?] = []
+    var MovieList = MoiveInfo()
+    let movieTitle = ["7번방의선물", "겨울왕국2", "광해", "괴물","국제시장", "극한직업", "도둑들",  "명량"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,12 +21,12 @@ class MovieTableViewController: UITableViewController {
 
     //섹션의 개수
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
     //셀의 개수
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return MovieList.count
+        return MovieList.movie.count
     }
     
     
@@ -32,10 +34,10 @@ class MovieTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell") as! MovieTableViewCell
         
-        cell.titleLabel.text = MovieList[indexPath.row]
-        print("!@#@$@#^%#$^&#$&^%&%&#%^&#&#%^&#%^")
-        cell.openingLabel.text = "2015.2.4"
-        cell.storyLabel.text = "가나다라마바사아가나다라마바사아가나다라마바사아가나다라마바사아"
+        let data = MovieList.movie[indexPath.row]
+        cell.configureCell(data: data)
+        
+        cell.movieImage.image = UIImage(named: movieTitle[indexPath.row])
 
         
         return cell

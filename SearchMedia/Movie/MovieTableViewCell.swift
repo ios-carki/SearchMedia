@@ -48,4 +48,16 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var openingLabel: UILabel!
     @IBOutlet weak var storyLabel: UILabel!
     
+    func configureCell(data: Movie) {
+        titleLabel.font = .boldSystemFont(ofSize: 15)
+        
+        //연결되는 이유
+        titleLabel.text = data.title
+        //여기까지
+        
+        openingLabel.text = "\(data.releaseDate) | \(data.country)"
+        storyLabel.text = data.overView
+        storyLabel.numberOfLines = 0
+    }
+    
 }
