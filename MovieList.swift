@@ -13,7 +13,7 @@ struct Movie {
     var overView: String
     var country: String
 }
-
+  
 struct MoiveInfo {
     let movie: [Movie] = [
         
