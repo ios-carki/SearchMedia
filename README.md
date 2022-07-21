@@ -1,1 +1,1 @@
-# SearchMedia<img width="581" alt="스크린샷 2022-07-20 오후 9 45 17" src="https://user-images.githubusercontent.com/44957712/179985490-2e9d7cad-ced2-43cb-8027-7dd9b5465df1.png">
+# SearchMedia<img width="581" alt="스크린샷 2022-07-21 오전 9 04 48" src="https://user-images.githubusercontent.com/44957712/180102740-500c9e2a-ad68-4e71-a352-1f30f44b74ab.png">
